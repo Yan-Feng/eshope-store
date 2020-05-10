@@ -1,0 +1,12 @@
+<form [formGroup]='productForm' (ngSubmit)='onSubmit()'>
+    <div class="row">
+        <div class="col-lg-5 col-md-8 col-sm-8">
+            <input formControlName='name' class="form-control" placeholder="Product Name">
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-4">
+            <button class="btn btn-primary" [disabled]="productForm.invalid" type="submit">Add Product</button>
+        </div>
+
+    </div>
+</form>

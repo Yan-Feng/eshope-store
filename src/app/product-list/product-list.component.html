@@ -1,0 +1,22 @@
+<div class="pt-3">
+    <table class="table">
+        <thead class="thead-light">
+            <tr class="mat-header-row">
+                <th>#</th>
+                <th>Name</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let product of products$ | async'>
+                <td>{{product.id}}</td>
+                <td>{{product.name}}</td>
+                <td>
+                    <button class="btn btn-secondary" (click)='onDelete(product.id)'>
+                        delete
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
